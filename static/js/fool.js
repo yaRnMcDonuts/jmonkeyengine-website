@@ -7,6 +7,8 @@
     return;
   }
 
+  const hideBanner = window.location.hostname === "hub.jmonkeyengine.org";
+
   window.CrabBonkConfig = {
     assetBase: "https://rcrabengine.github.io/CrabBonk/crab-bonk-assets/",
     bottomOffset: 48
@@ -20,6 +22,10 @@
   document.head.appendChild(script);
 
   function addBanner() {
+    if (hideBanner) {
+      return;
+    }
+
     const link = document.createElement("a");
     link.href = "https://hub.jmonkeyengine.org/t/jmonkeyengine-is-dead-long-live-rcrabengine/49445";
     link.target = "_blank";
@@ -27,7 +33,7 @@
     link.textContent = "jMonkeyEngine is rebranding to rCrabEngine — click to discover more";
 
     Object.assign(link.style, {
-      pointerEvent:"none",
+      pointerEvents: "none",
       position: "fixed",
       left: "0",
       right: "0",
@@ -41,7 +47,7 @@
       fontFamily: "sans-serif",
       fontSize: "10px",
       zIndex: "999999",
-      opacity:0.7
+      opacity: "0.7"
     });
 
     link.addEventListener("mouseenter", () => {
