@@ -27,6 +27,7 @@
     link.textContent = "jMonkeyEngine is rebranding to rCrabEngine — click to discover more";
 
     Object.assign(link.style, {
+      pointerEvent:"none",
       position: "fixed",
       left: "0",
       right: "0",
@@ -38,7 +39,7 @@
       textAlign: "center",
       textDecoration: "none",
       fontFamily: "sans-serif",
-      fontSize: "14px",
+      fontSize: "10px",
       zIndex: "999999"
     });
 
