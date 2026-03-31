@@ -33,14 +33,15 @@
       right: "0",
       bottom: "0",
       display: "block",
-      padding: "12px 16px",
+      padding: "6px 3px",
       background: "#111",
       color: "#fff",
       textAlign: "center",
       textDecoration: "none",
       fontFamily: "sans-serif",
       fontSize: "10px",
-      zIndex: "999999"
+      zIndex: "999999",
+      opacity:0.7
     });
 
     link.addEventListener("mouseenter", () => {
